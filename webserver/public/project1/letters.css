@@ -1,0 +1,27 @@
+
+    body {
+      background-color: #f6f2e9;
+      color: #2b2b2b;
+      font-size: 20px;
+      font-family: "Reenie Beanie", cursive;
+      margin: 0;
+      padding: 0;
+    }
+
+    .page {
+      width: 700px;
+      margin: 80px auto;
+      line-height: 1.8;
+    }
+
+    .date {
+      margin-bottom: 40px;
+    }
+
+    .letter {
+      white-space: normal;
+    }
+
+    .redacted {
+      font-family: 'Redacted';
+    }

@@ -1,0 +1,32 @@
+<html>
+<head>
+  <title>Droodle - Game</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bahiana&family=Jost:ital,wght@0,100..900;1,100..900&family=Rock+3D&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" href="/game.css" />
+  <script src="/main.js"></script>
+</head>
+<body>
+  <div class="page">
+
+ <main class="game">
+    <h1 class="game__title">WHAT IS THIS?</h1>
+
+    <div class="game__img">
+      <img id="droodle" src="" alt="Droodle to caption" />
+    </div>
+
+    <form action="/makeCaption" method="POST" class="game__input">
+      <input type="hidden" name="image" id="hiddenImage" />
+      <input type="text" name="caption" placeholder="Answer your caption here" class="game__field" required />
+      <button type="submit" class="game__enter">ENTER</button>
+    </form>
+
+  </main>
+
+  </div>
+
+</body>
+</html>

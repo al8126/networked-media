@@ -1,0 +1,31 @@
+<html>
+<head>
+  <title>Droodle - Submit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bahiana&family=Jost:ital,wght@0,100..900;1,100..900&family=Rock+3D&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+
+  <div class="page">
+    <main class="submit">
+
+      <h1 class="submit__title">UPLOAD YOUR DRAWING</h1>
+
+      <p class="submit__description">
+        We love your hand drawn Submissions! If you have a<br />
+        droodle we'd love to see it!
+      </p>
+
+<form action="/makeSubmit" method="POST" enctype="multipart/form-data" class="submit__form">
+  <label for="fileUpload" class="submit__btn">UPLOAD</label>
+  <input type="file" id="fileUpload" name="myImage" accept="image/*" hidden />
+</form>
+
+    </main>
+  </div>
+
+</body>
+  <script src="/main.js"></script>
+</html>

@@ -1,0 +1,37 @@
+<html>
+<head>
+  <title>Droodle - Other</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bahiana&family=Jost:ital,wght@0,100..900;1,100..900&family=Rock+3D&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/style.css" />
+    <script src="/main.js"></script>
+</head>
+<body>
+
+  <div class="page">
+    <main class="other">
+
+    <div class="other__card" id="cardFlip">
+      <div class="other__img">
+        <img src="<%= current ? current.image : '' %>" alt="droodle" id="droodleImg" />
+      </div>
+      <p class="other__caption" id="droodleCaption">
+        <%= current ? current.caption : 'NO RESPONSES YET' %>
+      </p>
+    </div>
+
+    <div class="other__btns">
+      <a href="/" class="other__btn">HOME</a>
+      <% if (hasNext) { %>
+        <button class="other__btn" id="prevBtn">PREV</button>
+      <% } %>
+      <% if (hasPrev) { %>
+        <button class="other__btn" id="nextBtn">NEXT</button>
+      <% } %>
+    </div>
+
+    </main>
+  </div>
+</body>
+</html>

@@ -1,0 +1,509 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f0ebe3;
+  color: #3a3530;
+  font-family: 'Jost', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Page */
+.page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 28px 60px 20px;
+}
+
+.navbar__logo a {
+  font-family: 'Rock 3D', cursive;
+  font-size: 40px;
+  letter-spacing: 0.04em;
+}
+
+.navbar__logo a:hover {
+  opacity: 0.65;
+}
+
+.navbar__links {
+  list-style: none;
+  display: flex;
+  gap: 120px;
+}
+
+.navbar__links li a {
+  font-size: 20px;
+  letter-spacing: 0.1em;
+}
+
+.navbar__links li a:hover {
+  opacity: 0.55;
+}
+
+.navbar__divider {
+  border: none;
+  border-top: 1.5px solid #b9a795;
+  opacity: 0.35;
+}
+
+/* Player */
+.player {
+  position: fixed;
+  bottom: 60px;
+  left: 60px;
+}
+
+.player__btn {
+  background: none;
+  border: 2px solid #3a3530;
+  color: #3a3530;
+  font-size: 1.2rem;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  animation: spin 3s linear infinite paused;
+}
+
+.player__btn.playing {
+  animation-play-state: running;
+}
+
+.player__btn:hover {
+  opacity: 0.6;
+}
+
+@keyframes spin {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Index */
+.body {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 48px 60px 20px;
+  gap: 32px;
+}
+
+.bodytext {
+  display: flex;
+  flex-direction: column;
+}
+
+.bodytitle {
+  display: flex;
+  flex-direction: column;
+  line-height: 0.9;
+}
+
+.bodywelcome {
+  font-family: 'Bahiana', cursive;
+  font-size: 200px;
+  font-weight: 400;
+}
+
+.bodydroodle {
+  font-family: 'Bahiana', cursive;
+  font-size: 200px;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 1.05;
+  margin-top: 16px;
+}
+
+.description {
+  margin-top: 16px;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.65;
+  color: #5a524a;
+  max-width: 800px;
+}
+
+.meow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.meow_img {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  animation: float 0.6s steps(2) infinite;
+}
+
+@keyframes float {
+  0%   { transform: translateY(0px) rotate(0deg); }
+  25%  { transform: translateY(-18px) rotate(-3deg); }
+  50%  { transform: translateY(0px) rotate(0deg); }
+  75%  { transform: translateY(-18px) rotate(3deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+.start {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 24px;
+  padding: 20px 80px 52px;
+}
+
+.aboutlink {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  transition: gap 0.25s ease;
+}
+
+.aboutlink:hover {
+  gap: 28px;
+}
+
+.text {
+  font-family: 'Jost', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.aboutlink:hover .text {
+  opacity: 0.5;
+  transition: opacity 0.2s;
+}
+
+/* About */
+.about {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 60px 60px;
+  gap: 48px;
+}
+
+.about__title {
+  font-family: 'Bahiana';
+  font-size: 200px;
+  letter-spacing: 0.02em;
+  text-align: center;
+  line-height: 1;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  width: 100%;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  max-width: 260px;
+}
+
+.card__img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+}
+
+.card__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card__caption {
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 1.5;
+}
+
+.about__description {
+  font-size: 1.1rem;
+  font-weight: 300;
+  line-height: 1.7;
+  text-align: center;
+  max-width: 640px;
+}
+
+.randomize {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  border: 2.5px solid #3a3530;
+  border-radius: 999px;
+  padding: 14px 48px;
+  transition: opacity 0.2s;
+}
+
+.randomize:hover {
+  opacity: 0.5;
+}
+
+/* Game */
+.game {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 60px 60px;
+  gap: 40px;
+}
+
+.game__title {
+  font-family: 'Bahiana';
+  font-size: 200px;
+  letter-spacing: 0.02em;
+  text-align: center;
+}
+
+.game__img {
+  border: 3.5px solid #3a3530;
+  width: 340px;
+  height: 340px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.game__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.game__input {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+  max-width: 760px;
+}
+
+.game__field {
+  flex: 1;
+  background: none;
+  border: 2px solid #3a3530;
+  border-radius: 999px;
+  padding: 16px 28px;
+  font-family: 'Jost', sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  color: #3a3530;
+  outline: none;
+}
+
+.game__field::placeholder {
+  color: #b0a898;
+}
+
+.game__enter {
+  background: none;
+  border: none;
+  font-family: 'Jost', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #3a3530;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  white-space: nowrap;
+}
+
+.game__enter:hover {
+  opacity: 0.5;
+}
+
+/* Recorded */
+.recorded {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+}
+
+.recorded__title {
+  font-family: 'Bahiana';
+  font-size: 200px;
+  letter-spacing: 0.02em;
+  text-align: center;
+}
+
+.recorded__btns {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.recorded__btn {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  border: 2px solid #3a3530;
+  border-radius: 999px;
+  padding: 14px 32px;
+  transition: opacity 0.2s;
+}
+
+.recorded__btn:hover {
+  opacity: 0.5;
+}
+
+/* Other */
+.other {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.other__card {
+  background: #faf8f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px;
+  gap: 20px;
+  width: 450px;
+  box-shadow: 8px 8px 9px #c4bab1;
+}
+
+.other__card.flipping {
+  animation: bookflip 0.6s steps(4) forwards;
+}
+
+@keyframes bookflip {
+  0%   { transform: perspective(600px) rotateY(0deg);  opacity: 1; }
+  40%  { transform: perspective(600px) rotateY(90deg); opacity: 1; }
+  60%  { transform: perspective(600px) rotateY(90deg); opacity: 1; }
+  100% { transform: perspective(600px) rotateY(0deg);  opacity: 1; }
+}
+
+.other__img {
+  width: 400px;
+  height: 400px;
+  overflow: hidden;
+}
+
+.other__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.other__caption {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.other__btns {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  width: 420px;
+}
+
+.other__btn {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  border: 2px solid #3a3530;
+  border-radius: 999px;
+  padding: 10px 28px;
+  transition: opacity 0.2s;
+  background: #f0ebe3;
+  cursor: pointer;
+}
+
+.other__btn:hover {
+  opacity: 0.5;
+}
+
+/* Submit */
+.submit {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 60px;
+}
+
+.submit__title {
+  font-family: 'Bahiana';
+  font-size: 200px;
+  letter-spacing: 0.04em;
+  text-align: center;
+  line-height: 1;
+}
+
+.submit__description {
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 1.7;
+  text-align: center;
+}
+
+.submit__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.submit__btn {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  border: 2px solid #3a3530;
+  border-radius: 999px;
+  padding: 14px 48px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.submit__btn:hover {
+  opacity: 0.5;
+}

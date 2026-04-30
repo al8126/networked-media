@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+body.choose {
+  background-image: url('/images/choosebg.png');
+  padding: 3rem 0 3rem 18rem;
+}
+
+body.authenticate {
+  background-image: url('/images/checkpasswordbg.png');
+  padding: 3rem 3rem 3rem 52%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+body.authenticate h1 {
+  font-family: 'Limelight', cursive;
+  font-size: 5rem;
+  font-weight: 400;
+  color: #111;
+  margin-bottom: 2rem;
+}
+
+body.authenticate p {
+  font-family: 'Gruppo', sans-serif;
+  font-size: 1.1rem;
+  letter-spacing: 0.1em;
+  color: #111;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+body.authenticate input {
+  width: 100%;
+  font-family: 'Gruppo', sans-serif;
+  font-size: 1rem;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #111;
+  outline: none;
+  padding: 0.5rem 0;
+  margin-bottom: 1.5rem;
+  color: #111;
+}
+
+body.authenticate button {
+  font-family: 'Gruppo', sans-serif;
+  font-size: 1.5rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #111;
+  float: right;
+  padding: 0;
+}
+
+body.authenticate button:hover {
+  opacity: 0.5;
+}
+
+h1 {
+  font-family: 'Limelight', cursive;
+  font-size: 7rem;
+  font-weight: 400;
+  color: #111;
+  line-height: 1;
+  margin-bottom: 3rem;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+
+nav a {
+  font-family: 'Gruppo', sans-serif;
+  font-size: 2.8rem;
+  font-weight: 400;
+  color: #111;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+input {
+  font-family: 'Gruppo', sans-serif;
+  font-size: 1.2rem;
+  background: transparent;
+  border: none;
+  border-bottom: 1.5px solid #111;
+  outline: none;
+  width: 100%;
+  padding: 0.5rem 0;
+  margin-bottom: 2rem;
+  color: #111;
+}
+
+input::placeholder {
+  color: #999;
+}
+
+button {
+  font-family: 'Gruppo', sans-serif;
+  font-size: 1.2rem;
+  background: transparent;
+  border: 1.5px solid #111;
+  padding: 0.6rem 2rem;
+  cursor: pointer;
+  color: #111;
+}
+
+button:hover {
+  background: #111;
+  color: #f5f3ee;
+}
+
+body.game {
+  background-image: url('/images/connectthedotsbg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#canvas-container {
+  position: absolute;
+  top: 50%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+}
+
+#finish-link {
+  position: fixed;
+  bottom: 6rem;
+  right: 16rem;
+  font-family: 'Limelight', cursive;
+  font-size: 2rem;
+  color: #111;
+  text-decoration: none;
+}
+
+#finish-link:hover {
+  opacity: 0.5;
+}
+
+body.finish {
+  background-image: url('/images/finish.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  margin: 0;
+}
